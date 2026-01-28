@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinigu konvertavimas</title>
+    <script src="/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="background-img">
+        <img src="/imgs/background.png" alt="background image" />
+      </div>
+      <div class="currency-converter">
+        <div class="heading">
+          <img src="/imgs/logo.png" alt="logo image" />
+        </div>
+        <form id="currencyConverterForm">
+          <div class="converter-form">
+            <div class="input-container">
+              <h5>Turima suma</h5>
+              <input type="number" value="1" id="currencyInput" />
+              <p class="input-understroke">
+                Įveskite savo turimą pinigų sumą ir pasirinkite valiutą.
+              </p>
+            </div>
+            <div>
+              <select id="currencySelect">
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+                <option value="rub">RUB</option>
+                <option value="cad">CAD</option>
+                <option value="pln">PLN</option>
+                <option value="cny">CNY</option>
+                <option value="sek">SEK</option>
+              </select>
+            </div>
+            <div>
+              <h5>Norima valiuta</h5>
+              <select id="secondCurrencySelect">
+                <option value="eur">Eurai</option>
+                <option value="usd">Doleriai</option>
+                <option value="gbp">Svaras sterlingų</option>
+                <option value="rub">Rubliai</option>
+                <option value="cad">Kanados doleriai</option>
+                <option value="pln">Lenkijos zlotas</option>
+                <option value="cny">Kinijos Juanis</option>
+                <option value="sek">Švedijos krona</option>
+              </select>
+              <p class="input-understroke">
+                Pasirinkite į kokią valiutą norite keisti turimą sumą.
+              </p>
+            </div>
+          </div>
+          <button type="submit" id="submitBtn">Konvertuoti</button>
+          <button type="submit" id="resetBtn">Gryžti į pradžią</button>
+        </form>
+        <div id="convertedResult"></div>
+      </div>
+    </div>
+  </body>
+</html>
